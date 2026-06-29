@@ -18,6 +18,7 @@ export interface Section {
   showLogo?: boolean
   showMap?: boolean
   showWorker?: boolean
+  bgImage?: string
 }
 
 export interface SectionProps extends Section {
