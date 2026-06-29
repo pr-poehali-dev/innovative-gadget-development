@@ -19,6 +19,7 @@ export interface Section {
   showMap?: boolean
   showWorker?: boolean
   bgImage?: string
+  contacts?: { icon: string; label: string; value: string; href: string }[]
 }
 
 export interface SectionProps extends Section {

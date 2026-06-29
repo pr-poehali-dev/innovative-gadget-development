@@ -48,9 +48,12 @@ export const sections = [
     id: 'contact',
     title: 'Нужны люди уже завтра?',
     content: 'Оставьте заявку — рассчитаем стоимость под вашу задачу и выведем персонал на объект в Перми в кратчайшие сроки.',
-    showButton: true,
-    buttonText: 'Оставить заявку',
     showLogo: true,
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/b2516dca-a4d3-4b1f-bf75-a4dff54e8b80.jpg'
+    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/b2516dca-a4d3-4b1f-bf75-a4dff54e8b80.jpg',
+    contacts: [
+      { icon: 'Phone', label: 'Телефон', value: '+7 (982) 448-85-69', href: 'tel:+79824488569' },
+      { icon: 'Send', label: 'Telegram', value: '@shtatmoment', href: 'https://t.me/shtatmoment' },
+      { icon: 'Mail', label: 'Email', value: 'statmoment@gmail.com', href: 'mailto:statmoment@gmail.com' },
+    ]
   },
 ]

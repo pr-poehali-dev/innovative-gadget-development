@@ -6,7 +6,7 @@ import PermMap from "./PermMap"
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/c3ec2cd8-2afc-43b7-a3b8-4441708e9a43.jpg'
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, bgImage }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, bgImage, contacts }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
       {bgImage && (
@@ -96,6 +96,35 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           <div className="absolute right-0 md:right-8 top-1/2 -translate-y-1/2">
             <PermMap isActive={isActive} />
           </div>
+        )}
+        {contacts && (
+          <motion.div
+            className="flex flex-col gap-4 mt-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isActive ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            {contacts.map((c, i) => (
+              <motion.a
+                key={c.label}
+                href={c.href}
+                target={c.href.startsWith('http') ? '_blank' : undefined}
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group w-fit"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isActive ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FF4D00]/15 text-[#FF4D00] group-hover:bg-[#FF4D00] group-hover:text-black transition-colors">
+                  <Icon name={c.icon} fallback="Circle" size={20} />
+                </span>
+                <div>
+                  <p className="text-xs text-neutral-500 uppercase tracking-widest">{c.label}</p>
+                  <p className="text-lg font-semibold text-white group-hover:text-[#FF4D00] transition-colors">{c.value}</p>
+                </div>
+              </motion.a>
+            ))}
+          </motion.div>
         )}
         {showButton && (
           <motion.div
