@@ -12,16 +12,15 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
       {showWorker && (
         <motion.div
-          className="absolute right-0 bottom-0 h-full w-1/2 pointer-events-none"
+          className="absolute right-4 md:right-12 bottom-0 h-4/5 w-auto pointer-events-none flex items-end"
           initial={{ opacity: 0, x: 60 }}
           animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
           transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10" />
           <img
             src={WORKER_URL}
             alt="Рабочий"
-            className="h-full w-full object-cover object-top"
+            className="h-full w-auto object-contain object-bottom"
           />
         </motion.div>
       )}
