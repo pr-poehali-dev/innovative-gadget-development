@@ -1,5 +1,12 @@
 import type { ReactNode } from "react"
 
+export interface Tariff {
+  position: string
+  price: string
+  unit: string
+  icon: string
+}
+
 export interface Section {
   id: string
   title: string
@@ -7,6 +14,7 @@ export interface Section {
   content?: string
   showButton?: boolean
   buttonText?: string
+  tariffs?: Tariff[]
 }
 
 export interface SectionProps extends Section {

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       {subtitle && (
@@ -32,6 +33,32 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
         >
           {content}
         </motion.p>
+      )}
+      {tariffs && (
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 max-w-4xl mt-10"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isActive ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {tariffs.map((t) => (
+            <div
+              key={t.position}
+              className="group rounded-2xl border border-neutral-800 bg-neutral-900/40 p-5 transition-colors hover:border-[#FF4D00]"
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#FF4D00]/10 text-[#FF4D00]">
+                  <Icon name={t.icon} fallback="Briefcase" size={20} />
+                </span>
+                <span className="text-lg font-semibold text-white">{t.position}</span>
+              </div>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-[#FF4D00]">{t.price}</span>
+                <span className="text-sm text-neutral-500">{t.unit}</span>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       )}
       {showButton && (
         <motion.div
