@@ -2,10 +2,11 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
+import PermMap from "./PermMap"
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/c3ec2cd8-2afc-43b7-a3b8-4441708e9a43.jpg'
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       {showLogo && (
@@ -77,6 +78,11 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
             </div>
           ))}
         </motion.div>
+      )}
+      {showMap && (
+        <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2">
+          <PermMap isActive={isActive} />
+        </div>
       )}
       {showButton && (
         <motion.div
