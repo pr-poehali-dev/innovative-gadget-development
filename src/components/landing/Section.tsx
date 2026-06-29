@@ -5,25 +5,10 @@ import type { SectionProps } from "@/types"
 import PermMap from "./PermMap"
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/c3ec2cd8-2afc-43b7-a3b8-4441708e9a43.jpg'
-const WORKER_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/bc24c52f-08e4-45b1-91b3-873dcb94aa0f.jpg'
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, showWorker }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
-      {showWorker && (
-        <motion.div
-          className="absolute right-4 md:right-12 bottom-0 h-4/5 w-auto pointer-events-none flex items-end"
-          initial={{ opacity: 0, x: 60 }}
-          animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-        >
-          <img
-            src={WORKER_URL}
-            alt="Рабочий"
-            className="h-full w-auto object-contain object-bottom"
-          />
-        </motion.div>
-      )}
       {showLogo && (
         <motion.div
           className="absolute top-8 left-8 md:top-10 md:left-16 lg:left-24"

@@ -8,8 +8,7 @@ export const sections = [
     content: 'Предоставляем линейный персонал для бизнеса в Перми: грузчики, комплектовщики, уборщики и не только. Быстро, официально, без головной боли с оформлением.',
     showButton: true,
     buttonText: 'Заказать персонал',
-    showLogo: true,
-    showWorker: true
+    showLogo: true
   },
   {
     id: 'about',
