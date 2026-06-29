@@ -20,12 +20,12 @@ export const sections = [
     title: 'Тарифы на персонал',
     content: 'Прозрачные ставки на популярные позиции. Минимальная смена — от 4 часов.',
     tariffs: [
-      { position: 'Грузчик', price: 'от 280 ₽', unit: 'за час', icon: 'Package' },
-      { position: 'Комплектовщик', price: 'от 260 ₽', unit: 'за час', icon: 'Boxes' },
-      { position: 'Уборщик', price: 'от 240 ₽', unit: 'за час', icon: 'Sparkles' },
-      { position: 'Разнорабочий', price: 'от 270 ₽', unit: 'за час', icon: 'HardHat' },
-      { position: 'Кладовщик', price: 'от 300 ₽', unit: 'за час', icon: 'Warehouse' },
-      { position: 'Фасовщик', price: 'от 250 ₽', unit: 'за час', icon: 'PackageCheck' },
+      { position: 'Грузчик', price: 'от 350 ₽', unit: 'за час', icon: 'Package' },
+      { position: 'Комплектовщик', price: 'от 350 ₽', unit: 'за час', icon: 'Boxes' },
+      { position: 'Уборщик', price: 'от 310 ₽', unit: 'за час', icon: 'Sparkles' },
+      { position: 'Разнорабочий', price: 'от 350 ₽', unit: 'за час', icon: 'HardHat' },
+      { position: 'Кладовщик', price: 'от 400 ₽', unit: 'за час', icon: 'Warehouse' },
+      { position: 'Фасовщик', price: 'от 320 ₽', unit: 'за час', icon: 'PackageCheck' },
     ]
   },
   {
