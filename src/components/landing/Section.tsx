@@ -3,9 +3,25 @@ import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs }: SectionProps) {
+const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/394e9fb8-d020-4d83-ac31-ba4bcd638f36.jpg'
+
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
+      {showLogo && (
+        <motion.div
+          className="absolute top-8 left-8 md:top-10 md:left-16 lg:left-24"
+          initial={{ opacity: 0 }}
+          animate={isActive ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src={LOGO_URL}
+            alt="ШтатМомент"
+            className="h-12 w-12 md:h-14 md:w-14 rounded-xl object-cover"
+          />
+        </motion.div>
+      )}
       {subtitle && (
         <motion.div
           className="mb-12"

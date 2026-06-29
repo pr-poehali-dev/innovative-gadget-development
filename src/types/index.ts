@@ -15,6 +15,7 @@ export interface Section {
   showButton?: boolean
   buttonText?: string
   tariffs?: Tariff[]
+  showLogo?: boolean
 }
 
 export interface SectionProps extends Section {
