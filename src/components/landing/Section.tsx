@@ -12,13 +12,15 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
         <motion.div
           className="absolute top-8 left-8 md:top-10 md:left-16 lg:left-24"
           initial={{ opacity: 0 }}
-          animate={isActive ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6 }}
+          animate={isActive ? { opacity: 1, rotate: [0, -8, 8, -4, 4, 0], scale: [1, 1.08, 1] } : {}}
+          transition={{ duration: 0.6, rotate: { duration: 1.2, delay: 0.4 }, scale: { duration: 1.2, delay: 0.4, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' } }}
         >
-          <img
+          <motion.img
             src={LOGO_URL}
             alt="ШтатМомент"
             className="h-12 w-12 md:h-14 md:w-14 rounded-xl object-cover"
+            animate={isActive ? { y: [0, -5, 0] } : {}}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
           />
         </motion.div>
       )}
