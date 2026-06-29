@@ -22,7 +22,7 @@ export default function PermMap({ isActive }: { isActive: boolean }) {
         {/* Shadow layer (3D depth) */}
         <svg
           viewBox="0 0 400 500"
-          className="absolute top-3 left-3 w-56 md:w-72 lg:w-80 opacity-30 blur-sm"
+          className="absolute top-3 left-3 w-36 md:w-44 lg:w-52 opacity-30 blur-sm"
           fill="#FF4D00"
         >
           <path d="M200 30 L230 45 L260 40 L280 60 L300 55 L320 75 L315 100 L330 120 L325 145 L340 165 L335 190 L350 210 L340 235 L320 250 L310 275 L290 290 L275 315 L255 330 L240 355 L220 365 L200 380 L180 365 L160 355 L145 330 L125 315 L110 290 L90 275 L80 250 L60 235 L50 210 L65 190 L60 165 L75 145 L70 120 L85 100 L80 75 L100 55 L120 40 L140 45 L160 35 L180 25 Z" />
@@ -31,7 +31,7 @@ export default function PermMap({ isActive }: { isActive: boolean }) {
         {/* Main map shape — Пермский край */}
         <svg
           viewBox="0 0 400 500"
-          className="w-56 md:w-72 lg:w-80 relative z-10"
+          className="w-36 md:w-44 lg:w-52 relative z-10"
           fill="none"
         >
           <defs>
