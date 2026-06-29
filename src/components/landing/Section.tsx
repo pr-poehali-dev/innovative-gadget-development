@@ -5,10 +5,26 @@ import type { SectionProps } from "@/types"
 import PermMap from "./PermMap"
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/c3ec2cd8-2afc-43b7-a3b8-4441708e9a43.jpg'
+const WORKER_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/bc24c52f-08e4-45b1-91b3-873dcb94aa0f.jpg'
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, showWorker }: SectionProps) {
   return (
-    <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
+    <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
+      {showWorker && (
+        <motion.div
+          className="absolute right-0 bottom-0 h-full w-1/2 pointer-events-none"
+          initial={{ opacity: 0, x: 60 }}
+          animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10" />
+          <img
+            src={WORKER_URL}
+            alt="Рабочий"
+            className="h-full w-full object-cover object-top"
+          />
+        </motion.div>
+      )}
       {showLogo && (
         <motion.div
           className="absolute top-8 left-8 md:top-10 md:left-16 lg:left-24"

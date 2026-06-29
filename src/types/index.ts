@@ -17,6 +17,7 @@ export interface Section {
   tariffs?: Tariff[]
   showLogo?: boolean
   showMap?: boolean
+  showWorker?: boolean
 }
 
 export interface SectionProps extends Section {
