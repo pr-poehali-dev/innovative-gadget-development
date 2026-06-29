@@ -24,7 +24,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
       <div className="relative z-10 flex flex-col justify-center h-full">
         {showLogo && (
           <motion.div
-            className="absolute top-8 left-0 md:top-10"
+            className="absolute top-4 left-0 md:top-6"
             initial={{ opacity: 0 }}
             animate={isActive ? { opacity: 1, rotate: [0, -8, 8, -4, 4, 0], scale: [1, 1.08, 1] } : {}}
             transition={{ duration: 0.6, rotate: { duration: 1.2, delay: 0.4 }, scale: { duration: 1.2, delay: 0.4, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' } }}
