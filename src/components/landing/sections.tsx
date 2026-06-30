@@ -9,19 +9,16 @@ export const sections = [
     showButton: true,
     buttonText: 'Заказать персонал',
     showLogo: true,
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/c69f1586-3edb-411c-9715-c9f1641fd159.jpg'
   },
   {
     id: 'about',
     title: 'Почему ШтатМомент?',
     content: 'Берём на себя подбор, оформление и замену сотрудников. Вы платите только за фактически отработанные часы — без налогов, отпускных и кадровых рисков.',
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/cc3a3e39-6dab-4269-8920-971eb2941d02.jpg'
   },
   {
     id: 'tariffs',
     title: 'Тарифы на персонал',
     content: 'Прозрачные ставки на популярные позиции. Минимальная смена — от 4 часов.',
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/65f2ede7-733d-4d80-8882-fe11553699df.jpg',
     tariffs: [
       { position: 'Грузчик', price: 'от 350 ₽', unit: 'за час', icon: 'Package' },
       { position: 'Комплектовщик', price: 'от 350 ₽', unit: 'за час', icon: 'Boxes' },
@@ -35,21 +32,18 @@ export const sections = [
     id: 'how',
     title: 'Как мы работаем',
     content: 'Оставляете заявку — подбираем нужное количество людей — выводим на смену в течение 24 часов. При необходимости оперативно заменим сотрудника.',
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/da592643-ddf1-4c24-8ecb-b067cd49bcc0.jpg'
   },
   {
     id: 'region',
     title: 'Работаем по всему Пермскому краю',
     content: 'Выводим персонал на объекты в Перми и Пермском крае. Знаем регион — быстро находим людей даже в отдалённых районах.',
     showMap: true,
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/8032a9fc-eb37-463f-bf9b-795d32ea78b6.jpg'
   },
   {
     id: 'contact',
     title: 'Нужны люди уже завтра?',
     content: 'Оставьте заявку — рассчитаем стоимость под вашу задачу и выведем персонал на объект в Перми в кратчайшие сроки.',
     showLogo: true,
-    bgImage: 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/files/b2516dca-a4d3-4b1f-bf75-a4dff54e8b80.jpg',
     contacts: [
       { icon: 'Phone', label: 'Телефон', value: '+7 (982) 448-85-69', href: 'tel:+79824488569' },
       { icon: 'Send', label: 'Telegram', value: '@shtatmoment', href: 'https://t.me/shtatmoment' },

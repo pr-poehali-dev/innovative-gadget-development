@@ -3,24 +3,15 @@ import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
 import PermMap from "./PermMap"
+import ParticlesBackground from "./ParticlesBackground"
 
 const LOGO_URL = 'https://cdn.poehali.dev/projects/89c0a7a0-04c3-42ad-b9f8-d18d1f152981/bucket/c3ec2cd8-2afc-43b7-a3b8-4441708e9a43.jpg'
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, bgImage, contacts }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, tariffs, showLogo, showMap, contacts }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
-      {bgImage && (
-        <>
-          <motion.div
-            className="absolute inset-0 bg-cover bg-center z-0"
-            style={{ backgroundImage: `url(${bgImage})` }}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.05 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          />
-          <div className="absolute inset-0 bg-black/70 z-0" />
-        </>
-      )}
+      <ParticlesBackground />
+      <div className="absolute inset-0 bg-black/60 z-0" />
       <div className="relative z-10 flex flex-col justify-center h-full">
         {showLogo && (
           <motion.div
